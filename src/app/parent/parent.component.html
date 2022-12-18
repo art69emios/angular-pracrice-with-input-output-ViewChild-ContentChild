@@ -1,0 +1,15 @@
+<button (click)="countDisc()" >want discout</button>
+<p #p >TESTtext</p>
+<p #p >TESTtext</p>
+<p #p >TESTtext</p>
+<p #p >TESTtext</p>
+<p #p >TESTtext</p>
+
+<div *ngFor="let prodct of products" class="product">
+
+   <app-child [discount]="withDiscount? discount : 0" [product1]="prodct" (discription)="fHandler(prodct.id)">
+      <p #bCol >{{prodct.color}}</p> 
+   </app-child>
+   
+</div>
+

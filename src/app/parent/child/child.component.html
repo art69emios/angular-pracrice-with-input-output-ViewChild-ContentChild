@@ -1,0 +1,7 @@
+<div>
+   {{product.name}}
+   <p>{{product.price - (discount * product.price) }} </p>
+   <p *ngIf="product.isShow" >{{product.description}}</p>
+   <button (click)="showDesc(product)" >show description</button>
+   <ng-content></ng-content>
+</div>
